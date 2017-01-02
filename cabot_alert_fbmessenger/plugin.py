@@ -1,12 +1,13 @@
-from cabot.plugins.models import AlertPlugin
-from django import forms
+from django.db import models
+from cabot.cabotapp.alert import AlertPlugin, AlertPluginUserData
+
 from os import environ as env
 
-from logging import getLogger
-logger = getLogger(__name__)
 
-class SkeletonAlertUserSettingsForm(forms.Form):
-    favorite_bone = forms.CharField(max_length=100)
+class FacebookMessengerAlertUserData(AlertPluginUserData):
+    name = "Facebook Messenger"
+    fb_user_id = models.CharField(max_length=50, blank=True)
+
 
 class SkeletonAlertPlugin(AlertPlugin):
     name = "Skeleton"
