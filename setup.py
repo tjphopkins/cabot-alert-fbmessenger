@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='cabot-alert-fbmessenger',
-    version='1.0.0',
+    version='0.0.1',
     description='A Facebook Messenger plugin for Cabot by Arachnys',
     author='Thomas Hopkins',
     author_email='tomjphopkins@gmail.com',

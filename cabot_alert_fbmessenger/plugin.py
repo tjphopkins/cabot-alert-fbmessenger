@@ -10,21 +10,10 @@ class FacebookMessengerAlertUserData(AlertPluginUserData):
 
 
 class SkeletonAlertPlugin(AlertPlugin):
-    name = "Skeleton"
-    slug = "cabot_alert_skeleton"
-    author = "Jonathan Balls"
+    name = "Facebook Messenger"
+    slug = "fbmessenger"
+    author = "Thomas Hopkins"
     version = "0.0.1"
-    font_icon = "fa fa-code"
-
-    user_config_form = SkeletonAlertUserSettingsForm
 
     def send_alert(self, service, users, duty_officers):
-        calcium_level = env.get('CALCIUM_LEVEL') 
-        message = service.get_status_message()
-        for u in users:
-            logger.info('{} - This is bad for your {}.'.format(
-                message,
-                u.cabot_alert_skeleton_settings.favorite_bone))
-
-        return True
-
+        return
