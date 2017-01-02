@@ -9,5 +9,5 @@ setup(
     author='Thomas Hopkins',
     author_email='tomjphopkins@gmail.com',
     packages=find_packages(),
-    download_url='',
+    download_url='https://github.com/tjphopkins/cabot-alert-fbmessenger.git',
 )
