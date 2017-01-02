@@ -13,7 +13,7 @@ class SkeletonAlertPlugin(AlertPlugin):
     name = "Facebook Messenger"
     slug = "fbmessenger"
     author = "Thomas Hopkins"
-    version = "0.0.1"
+    version = "0.0.2"
 
     def send_alert(self, service, users, duty_officers):
         return
