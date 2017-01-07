@@ -31,11 +31,11 @@ class FacebookMessengerAlertUserData(AlertPluginUserData):
     # used for SMS and phone call alerts.
     fb_mobile_number = models.CharField(max_length=30, blank=True)
 
-    def save(self):
+    def save(self, *args, **kwargs):
         # The phone number must be in the format +1(212)555-2368
         # TODO: Ensure ValidationError is raised to client
         _validate_fb_mobile_number(self.fb_mobile_number)
-        self(FacebookMessengerAlertPlugin, super).save()
+        self(FacebookMessengerAlertPlugin, super).save(*args, **kwargs)
 
 
 class FacebookMessengerAlertPlugin(AlertPlugin):
