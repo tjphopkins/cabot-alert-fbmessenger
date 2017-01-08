@@ -42,7 +42,7 @@ class FacebookMessengerAlertPlugin(AlertPlugin):
     name = "Facebook Messenger"
     slug = "fbmessenger"
     author = "Thomas Hopkins"
-    version = "0.0.2"
+    version = "0.0.3"
 
     def send_alert(self, service, users, duty_officers):
         """Send alert function to send alerts to users via Facebook Messenger
