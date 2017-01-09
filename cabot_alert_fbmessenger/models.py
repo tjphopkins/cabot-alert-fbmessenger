@@ -9,7 +9,6 @@ from django.conf import settings
 from django.core.exceptions import ValidationError
 
 from cabot.cabotapp.alert import AlertPlugin, AlertPluginUserData
-from cabot.cabotapp.models import UserProfile
 
 from os import environ as env
 
@@ -30,7 +29,7 @@ class FacebookMessengerAlertUserData(AlertPluginUserData):
     name = "Facebook Messenger"
     # This mobile number may be different to the user's primary number
     # used for SMS and phone call alerts.
-    fb_mobile_number = models.CharField(max_length=30, blank=True, null=True)
+    fb_mobile_number = models.CharField(max_length=30, blank=True)
 
     def save(self, *args, **kwargs):
         # The phone number must be in the format +1(212)555-2368
