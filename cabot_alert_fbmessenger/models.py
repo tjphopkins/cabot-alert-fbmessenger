@@ -34,7 +34,7 @@ class FacebookMessengerAlertUserData(AlertPluginUserData):
     def save(self, *args, **kwargs):
         # The phone number must be in the format +1(212)555-2368
         # TODO: Ensure ValidationError is raised to client
-        if hasattr(self, 'fb_mobile_number'):
+        if self.fb_mobile_number:
             _validate_fb_mobile_number(self.fb_mobile_number)
         return super(FacebookMessengerAlertUserData, self).save(*args, **kwargs)
 
